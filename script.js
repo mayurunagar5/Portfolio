@@ -6,6 +6,54 @@
 (function(){
   "use strict";
 
+  /* ---------- Birthday loading screen + dashboard celebration ---------- */
+  function isMayursBirthday() {
+    var today = new Date();
+    // Months are zero-based: 6 is July. This is 23 July in the visitor's local time.
+    return today.getMonth() === 6 && today.getDate() === 23;
+  }
+
+  function addConfetti(container, amount, startDelay) {
+    if (!container) return;
+
+    for (var i = 0; i < amount; i += 1) {
+      var piece = document.createElement("span");
+      piece.className = "birthday-confetti-piece";
+      piece.style.left = Math.random() * 100 + "%";
+      piece.style.animationDelay = startDelay + Math.random() * 1.4 + "s";
+      piece.style.animationDuration = 2.8 + Math.random() * 1.8 + "s";
+      piece.style.setProperty("--birthday-drift", Math.random() * 26 - 13 + "vw");
+      piece.style.setProperty("--birthday-rotation", Math.random() * 720 - 360 + "deg");
+      container.appendChild(piece);
+    }
+  }
+
+  function startBirthdayExperience() {
+    if (!isMayursBirthday()) return;
+
+    var experience = document.getElementById("birthdayExperience");
+    var loadingScreen = document.getElementById("birthdayLoadingScreen");
+    var loadingConfetti = document.getElementById("birthdayLoadingConfetti");
+    var dashboardConfetti = document.getElementById("birthdayDashboardConfetti");
+    if (!experience || !loadingScreen) return;
+
+    experience.hidden = false;
+    addConfetti(loadingConfetti, 54, 0);
+    addConfetti(dashboardConfetti, 42, 2.1);
+
+    window.setTimeout(function () {
+      loadingScreen.classList.add("is-finished");
+    }, 2400);
+    window.setTimeout(function () {
+      loadingScreen.remove();
+    }, 3000);
+    window.setTimeout(function () {
+      experience.remove();
+    }, 8500);
+  }
+
+  startBirthdayExperience();
+
   /* ---------- Mobile navigation ---------- */
   var burger = document.getElementById("navBurger");
   var mobileNav = document.getElementById("mobileNav");

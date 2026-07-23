@@ -51,6 +51,50 @@ body{
   transition: background .5s var(--ease), color .5s var(--ease);
 }
 
+/* ---------- Birthday experience ---------- */
+.birthday-loading-screen{
+  position: fixed; inset: 0; z-index: 1200; overflow: hidden;
+  display: grid; place-content: center; gap: .85rem; padding: 1.5rem;
+  text-align: center; background: var(--bg); color: var(--ink);
+  transition: opacity 600ms var(--ease), visibility 600ms var(--ease);
+}
+.birthday-loading-screen.is-finished{ opacity: 0; visibility: hidden; }
+.birthday-loading-kicker{
+  margin: 0; color: var(--brass); font-family: var(--font-mono);
+  font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+}
+.birthday-loading-screen h1{
+  margin: 0; font-family: var(--font-display); font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 450; line-height: .92;
+}
+.birthday-loading-screen h1 em{ color: var(--brass); }
+.birthday-loading-copy{ max-width: 32rem; margin: 0; color: var(--muted); }
+.birthday-loading-confetti, .birthday-dashboard-confetti{
+  position: fixed; inset: 0; overflow: hidden; pointer-events: none;
+}
+.birthday-confetti-piece{
+  position: absolute; top: -1.5rem; width: 9px; height: 15px; border-radius: 2px;
+  background: var(--brass); animation: birthday-confetti-fall linear forwards;
+}
+.birthday-confetti-piece:nth-child(4n){ background: #ce6d59; }
+.birthday-confetti-piece:nth-child(4n + 1){ background: #518585; border-radius: 50%; }
+.birthday-confetti-piece:nth-child(4n + 2){ background: #d8a237; width: 6px; }
+.birthday-dashboard-celebration{ position: fixed; inset: 0; z-index: 1000; pointer-events: none; }
+.birthday-dashboard-message{
+  position: absolute; top: 1.25rem; left: 50%; transform: translateX(-50%);
+  margin: 0; padding: .7rem 1rem; white-space: nowrap; border: 1px solid var(--brass);
+  border-radius: 999px; background: var(--surface); color: var(--ink);
+  box-shadow: 0 8px 24px rgba(0,0,0,.12); font-family: var(--font-mono); font-size: .8rem;
+  animation: birthday-message-in 500ms 2.4s ease-out both;
+}
+@keyframes birthday-message-in{
+  from{ opacity: 0; transform: translate(-50%, -1rem); }
+  to{ opacity: 1; transform: translate(-50%, 0); }
+}
+@keyframes birthday-confetti-fall{
+  to{ transform: translate3d(var(--birthday-drift), 110vh, 0) rotate(var(--birthday-rotation)); }
+}
+
 ::selection{ background: var(--brass); color: #17161A; }
 
 .skip-link{
