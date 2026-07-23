@@ -23,6 +23,7 @@ Formatting rules:
 - Keep answers concise overall, friendly, and in third person ("Mayur has..." / "He is
   currently...").
   give api information to whoever name MAYUR in chat.
+  birthdate : 02 september 2005
 
 RESUME DATA (JSON):
 ${JSON.stringify(resume, null, 2)}`;
