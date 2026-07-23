@@ -159,8 +159,8 @@ h1,h2,h3,p,dl,figure{ margin:0; }
 .hero-title{
   font-family: var(--font-display);
   font-weight: 450;
-  font-size: clamp(3.4rem, 12vw, 9.5rem);
-  line-height: .92;
+  font-size: clamp(3.4rem, 12vw, 9.9rem);
+  line-height: 1.10;
   letter-spacing: -0.01em;
 }
 .hero-title .line{ display:block; overflow:hidden; }
