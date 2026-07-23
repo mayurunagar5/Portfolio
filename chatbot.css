@@ -98,6 +98,48 @@
   color: var(--ink);
   border-bottom-left-radius: 4px;
 }
+/* Formatted content inside bot replies: paragraphs, bullet lists, bold */
+.chatbot-msg.bot p{
+  margin: 0;
+}
+.chatbot-msg.bot p + p{
+  margin-top: .6em;
+}
+.chatbot-msg.bot ul,
+.chatbot-msg.bot ol{
+  margin: .5em 0 0;
+  padding-left: 1.15em;
+  display: flex;
+  flex-direction: column;
+  gap: .35em;
+}
+.chatbot-msg.bot ul{ list-style: none; padding-left: 0; }
+.chatbot-msg.bot ul li{
+  position: relative;
+  padding-left: 1.1em;
+}
+.chatbot-msg.bot ul li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .55em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--brass);
+}
+.chatbot-msg.bot ol{ list-style: decimal; }
+.chatbot-msg.bot ol li{ padding-left: .2em; }
+.chatbot-msg.bot strong{
+  color: var(--brass);
+  font-weight: 600;
+}
+.chatbot-msg.bot code{
+  font-family: var(--font-mono);
+  font-size: .82em;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: .1em .4em;
+}
 .chatbot-msg.user{
   align-self: flex-end;
   background: var(--brass);

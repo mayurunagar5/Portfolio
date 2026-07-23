@@ -41,10 +41,87 @@
   });
 
   /* ---------- Rendering ---------- */
+
+  // Escapes HTML special characters so user-provided text or literal
+  // characters inside the bot's reply can never break out as markup.
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  // Converts simple markdown-style text from the model (bullet lines
+  // starting with "-", "*", or "1.", plus **bold** and `code`) into
+  // safe HTML: paragraphs, <ul>/<ol> lists, <strong>, <code>.
+  function formatBotReply(text) {
+    var escaped = escapeHTML(text.trim());
+
+    // Inline formatting: **bold** and `code`
+    escaped = escaped
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/`(.+?)`/g, "<code>$1</code>");
+
+    var lines = escaped.split(/\r?\n/);
+    var html = "";
+    var listType = null; // "ul" | "ol" | null
+    var paragraphBuffer = [];
+
+    function flushParagraph() {
+      if (paragraphBuffer.length) {
+        html += "<p>" + paragraphBuffer.join(" ") + "</p>";
+        paragraphBuffer = [];
+      }
+    }
+    function closeList() {
+      if (listType) {
+        html += "</" + listType + ">";
+        listType = null;
+      }
+    }
+
+    lines.forEach(function (rawLine) {
+      var line = rawLine.trim();
+
+      if (!line) {
+        flushParagraph();
+        closeList();
+        return;
+      }
+
+      var bulletMatch = line.match(/^[-*•]\s+(.*)/);
+      var numberedMatch = line.match(/^\d+[.)]\s+(.*)/);
+
+      if (bulletMatch) {
+        flushParagraph();
+        if (listType !== "ul") { closeList(); html += "<ul>"; listType = "ul"; }
+        html += "<li>" + bulletMatch[1] + "</li>";
+      } else if (numberedMatch) {
+        flushParagraph();
+        if (listType !== "ol") { closeList(); html += "<ol>"; listType = "ol"; }
+        html += "<li>" + numberedMatch[1] + "</li>";
+      } else {
+        closeList();
+        paragraphBuffer.push(line);
+      }
+    });
+
+    flushParagraph();
+    closeList();
+
+    return html || "<p>" + escaped + "</p>";
+  }
+
   function addMessage(text, role) {
     var el = document.createElement("div");
     el.className = "chatbot-msg " + role;
-    el.textContent = text;
+
+    if (role === "bot") {
+      el.innerHTML = formatBotReply(text);
+    } else {
+      el.textContent = text;
+    }
+
     messagesEl.appendChild(el);
     messagesEl.scrollTop = messagesEl.scrollHeight;
     return el;
