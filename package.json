@@ -1,0 +1,9 @@
+{
+  "name": "mayur-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mayur Unagar portfolio site with a Netlify Function powering the chatbot.",
+  "dependencies": {
+    "openai": "^4.55.0"
+  }
+}

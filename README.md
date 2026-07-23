@@ -1,37 +1,56 @@
-# Chatbot proxy — setup
+# Mayur Unagar — Portfolio
 
-The static site (`index.html`, `style.css`, `script.js`, `chatbot.css`, `chatbot.js`)
-lives in the project root. This `server/` folder is a small Express app that:
+Static site with a floating chatbot, answering questions about Mayur using
+his resume data via NVIDIA's `meta/llama-3.1-70b-instruct` model.
 
-1. Serves those static files
-2. Exposes `POST /api/chat`, which the widget calls
-3. Holds your NVIDIA API key and forwards requests to `build.nvidia.com`
+## Directory structure
 
-The key never reaches the browser — this is required, not optional, since
-anything shipped to `chatbot.js` is visible to every visitor.
-
-## Run it locally
-
-```bash
-cd server
-npm install
-cp .env.example .env
-# edit .env and paste your real NVIDIA_API_KEY
-npm start
+```
+portfolio/
+├── index.html                    Site markup + chatbot widget markup
+├── style.css                     Site styles (hero, sections, nav, etc.)
+├── script.js                     Site behavior (nav, reveals, theme toggle)
+├── chatbot.css                   Floating chat widget styles
+├── chatbot.js                    Chat widget frontend — calls "/api/chat" only
+│
+├── netlify.toml                  Build config + redirect: /api/chat → the function
+├── package.json                  Root deps (openai SDK) so Netlify can build the function
+│
+└── netlify/
+    └── functions/
+        ├── chat.js               Serverless function: the only place holding NVIDIA_API_KEY
+        └── resume.json           Structured resume data, injected into the model's system prompt
 ```
 
-Then open http://localhost:3001 — you'll see the full portfolio with the
-floating chat button working in the bottom-right corner.
+## Why it's shaped this way
+
+- `chatbot.js` never talks to `build.nvidia.com` directly — the API key would
+  be visible to anyone opening dev tools if it did.
+- Netlify only runs static files plus optional serverless functions, so the
+  proxy has to be a function (`netlify/functions/chat.js`), not a long-running
+  Express server.
+- `netlify.toml` makes `chatbot.js`'s call to `/api/chat` quietly resolve to
+  `/.netlify/functions/chat` — no frontend code needs to know that.
+
+## Deploy setup
+
+1. Push this whole structure to your repo, including `netlify.toml`,
+   `package.json`, and everything under `netlify/functions/`.
+2. In Netlify → **Site settings → Environment variables**, add:
+   `NVIDIA_API_KEY = your_real_key`
+3. Trigger a deploy. Netlify installs `openai` from `package.json`
+   automatically and deploys `chat.js` as a function.
+
+## Test locally with the function working
+
+```bash
+npm install -g netlify-cli
+netlify dev
+```
+This serves the site and runs the function together, so `/api/chat` behaves
+exactly like it will on the live site.
 
 ## Updating what the bot knows
 
-Edit `server/data/resume.json`. It's loaded fresh each time the server starts
-and injected into the model's system prompt, so the bot's answers always match
-whatever is in that file — no need to touch `server.js`.
-
-## Deploying
-
-Any Node host (Render, Railway, Fly.io, a VPS, etc.) works — just set the
-`NVIDIA_API_KEY` environment variable there instead of using a `.env` file,
-and run `npm start`. Point your domain at that host; there's no separate
-frontend deploy needed since Express serves the static files too.
+Edit `netlify/functions/resume.json`. It's loaded fresh on each function call
+and fed straight into the model's system prompt — no other file needs to change.
