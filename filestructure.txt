@@ -2,15 +2,14 @@
 |-- chatbot.css
 |-- chatbot.js
 |-- index.html
+|-- netlify
+    |-- functions
+        |-- chat.js
+        |-- resume.json
+|-- netlify.toml
+|-- package.json
 |-- README.md
 |-- script.js
-|-- server
-    |-- .env
-    |-- data
-        |-- resume.json
-    |-- package-lock.json
-    |-- package.json
-    |-- server.js
 |-- src
     |-- Mayur Unagar ATS Resume.pdf
     |-- mayur.jpeg

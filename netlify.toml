@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Lets chatbot.js keep calling "/api/chat" unchanged —
+# Netlify quietly routes that path to the serverless function.
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200

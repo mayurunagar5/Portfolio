@@ -108,11 +108,28 @@ h1,h2,h3,p,dl,figure{ margin:0; }
 .rail-nav a span{ color: var(--brass); }
 .rail-nav a:hover, .rail-nav a.active{ color: var(--ink); }
 
+.header-actions{
+  display:flex; align-items:center; gap: .75rem;
+  margin-left: 1.5rem;
+}
+
+.resume-download{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: .6rem 1rem; border: 1px solid var(--line-strong);
+  border-radius: 999px; background: var(--surface);
+  color: var(--ink); font-family: var(--font-mono); font-size: .74rem;
+  letter-spacing: .03em; transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
+}
+
+.resume-download:hover{
+  background: var(--surface-2); border-color: var(--brass); color: var(--brass);
+}
+
 .theme-toggle{
   width: 44px; height: 26px; border-radius: 20px;
   border: 1px solid var(--line-strong); background: var(--surface);
   position: relative; cursor:pointer; padding: 2px;
-  margin-left: 1.5rem;
+  margin-left: 0;
 }
 .toggle-dot{
   display:block; width: 18px; height: 18px; border-radius: 50%;
