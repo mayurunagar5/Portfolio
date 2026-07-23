@@ -1,284 +1,446 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mayur Unagar — Frontend, WordPress &amp; AI Development</title>
-<meta name="description" content="Mayur Unagar is a developer working across WordPress, frontend engineering, AI/ML and creative interfaces. Portfolio, process and selected work.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="chatbot.css">
-</head>
-<body>
-
-<div class="grain" aria-hidden="true"></div>
-<div class="progress-rail" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
-
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-head">
-  <a href="#top" class="mark">MU<span>.</span></a>
-  <nav class="rail-nav" aria-label="Primary">
-    <ol>
-      <li><a href="#about" data-idx="01"><span>01</span>About</a></li>
-      <li><a href="#expertise" data-idx="02"><span>02</span>Expertise</a></li>
-      <li><a href="#work" data-idx="03"><span>03</span>Work</a></li>
-      <li><a href="#education" data-idx="04"><span>04</span>Education</a></li>
-      <li><a href="#contact" data-idx="05"><span>05</span>Contact</a></li>
-    </ol>
-  </nav>
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
-    <span class="toggle-dot"></span>
-  </button>
-  <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span>
-  </button>
-</header>
-
-<nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
-  <ol>
-    <li><a href="#about"><span>01</span>About</a></li>
-    <li><a href="#expertise"><span>02</span>Expertise</a></li>
-    <li><a href="#work"><span>03</span>Work</a></li>
-    <li><a href="#education"><span>04</span>Education</a></li>
-    <li><a href="#contact"><span>05</span>Contact</a></li>
-  </ol>
-</nav>
-
-<main id="main">
-
-  <section class="hero" id="top">
-    <div class="hero-text">
-      <p class="hero-eyebrow reveal">Portfolio -</p>
-      <h1 class="hero-title">
-        <span class="line reveal-line"><span>Mayur</span></span>
-        <span class="line reveal-line"><span>Unagar</span></span>
-      </h1>
-      <div class="hero-meta reveal">
-        <p class="hero-role">AI / ML Developer,<br> building intelligent interfaces across the web.</p>
-        <div class="hero-tags">
-          <span>AI / ML</span><span>WordPress</span><span>Frontend</span><span>UI · UX</span><span>Creative Dev</span>
-        </div>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mayur Unagar — Frontend, WordPress &amp; AI Development</title>
+    <meta
+      name="description"
+      content="Mayur Unagar is a developer working across WordPress, frontend engineering, AI/ML and creative interfaces. Portfolio, process and selected work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="chatbot.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress-rail" aria-hidden="true">
+      <div class="progress-fill" id="progressFill"></div>
     </div>
 
-    <figure class="hero-portrait reveal">
-      <span class="hero-portrait-frame">
-        <img src="images/profile.jpg" alt="Portrait of Mayur Unagar">
-      </span>
-      <span class="hero-portrait-tag">
-        <span class="hero-portrait-dot"></span> Available for work
-      </span>
-    </figure>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <a class="hero-scroll" href="#about" aria-label="Scroll to about section">
-      <span class="scroll-line"></span> Scroll
-    </a>
-  </section>
-
-  <section class="section about" id="about">
-    <div class="section-head reveal">
-      <span class="section-num">01</span>
-      <h2>About</h2>
-    </div>
-    <div class="about-grid">
-      <p class="about-lede reveal">
-        I build models first, then the interfaces that put them to work —
-        currently deep in an AI internship, training and shipping systems
-        that hold up under real data.
-      </p>
-      <div class="about-body reveal">
-        <p>I'm currently interning in AI, building and fine-tuning machine learning models end to end — from data pipeline to a working, testable system. Alongside that, I bring years of WordPress and frontend experience, so the models I build don't stay in a notebook; they end up in interfaces people actually use.</p>
-        <p>I care about the parts most people skip: model evaluation that isn't just accuracy, load performance, the fifty small decisions that separate "finished" from "considered." My tools change with the job; the standard doesn't.</p>
-        <dl class="about-facts">
-          <div><dt>Based in</dt><dd>India · Remote worldwide</dd></div>
-          <div><dt>Focus</dt><dd>Applied AI, Frontend, WordPress</dd></div>
-          <div><dt>Currently</dt><dd>AI/ML Intern · building models</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <section class="section expertise" id="expertise">
-    <div class="section-head reveal">
-      <span class="section-num">02</span>
-      <h2>Expertise</h2>
-    </div>
-    <div class="expertise-grid">
-      <article class="skill-card reveal">
-        <span class="skill-index">01</span>
-        <h3>AI &amp; Machine Learning</h3>
-        <p>Training and fine-tuning models end to end — data pipelines, evaluation, and deployment into real, model-backed products.</p>
-      </article>
-      <article class="skill-card reveal">
-        <span class="skill-index">02</span>
-        <h3>WordPress Development</h3>
-        <p>Custom themes, block editor systems, plugin architecture, and performance-tuned builds that stay easy to maintain long after launch.</p>
-      </article>
-      <article class="skill-card reveal">
-        <span class="skill-index">03</span>
-        <h3>Frontend Engineering</h3>
-        <p>Semantic, accessible interfaces built on modern CSS and vanilla JavaScript — fast by default, animated with intent.</p>
-      </article>
-      <article class="skill-card reveal">
-        <span class="skill-index">04</span>
-        <h3>UI / UX Design</h3>
-        <p>Interfaces designed from the user's task backward — information hierarchy first, decoration only where it earns its place.</p>
-      </article>
-      <article class="skill-card reveal">
-        <span class="skill-index">05</span>
-        <h3>Creative Development</h3>
-        <p>Scroll narratives, micro-interactions, and generative visuals for brands that want their site to feel handmade.</p>
-      </article>
-      <article class="skill-card reveal">
-        <span class="skill-index">06</span>
-        <h3>Performance &amp; Accessibility</h3>
-        <p>Lean payloads, semantic markup, and keyboard-first navigation — quality that shows up in Lighthouse and in daily use.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section work" id="work">
-    <div class="section-head reveal">
-      <span class="section-num">03</span>
-      <h2>Selected Work</h2>
-    </div>
-    <div class="work-list">
-      <article class="work-row reveal">
-        <div class="work-row-top">
-          <h3>Signal — Recommendation Engine</h3>
-          <span class="work-year">2026</span>
-        </div>
-        <p class="work-desc">A lightweight ML recommendation layer for a media platform, tuned to surface relevant reads without heavy inference cost. Built during my AI internship.</p>
-        <ul class="work-tags"><li>AI / ML</li><li>Python</li><li>Model Deployment</li></ul>
-      </article>
-      <article class="work-row reveal">
-        <div class="work-row-top">
-          <h3>Atelier Commerce</h3>
-          <span class="work-year">2025</span>
-        </div>
-        <p class="work-desc">A headless WordPress storefront rebuilt for speed — sub-second interactions across an 800-product catalog.</p>
-        <ul class="work-tags"><li>WordPress</li><li>WooCommerce</li><li>Performance</li></ul>
-      </article>
-      <article class="work-row reveal">
-        <div class="work-row-top">
-          <h3>Ferro Studio</h3>
-          <span class="work-year">2023</span>
-        </div>
-        <p class="work-desc">Editorial portfolio site for an architecture studio, built as a scroll-driven narrative with no frameworks — pure HTML, CSS, and JS.</p>
-        <ul class="work-tags"><li>Frontend</li><li>Motion Design</li><li>Vanilla JS</li></ul>
-      </article>
-      <article class="work-row reveal">
-        <div class="work-row-top">
-          <h3>Nord Analytics Dashboard</h3>
-          <span class="work-year">2022</span>
-        </div>
-        <p class="work-desc">A data-dense internal dashboard redesigned around clarity — fewer colors, clearer hierarchy, faster decisions.</p>
-        <ul class="work-tags"><li>UI / UX</li><li>Design Systems</li></ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section education" id="education">
-    <div class="section-head reveal">
-      <span class="section-num">04</span>
-      <h2>Education</h2>
-    </div>
-    <ol class="edu-list">
-      <li class="edu-row reveal">
-        <span class="edu-year">2023 — 2026</span>
-        <div>
-          <h3>Bachelor of Science, Information Technology</h3>
-          <p class="edu-school">Shree Ramkrishna Institute of Computer Education and Applied Sciences, Surat</p>
-          <p class="edu-detail">7.95 CGPA</p>
-        </div>
-      </li>
-      <li class="edu-row reveal">
-        <span class="edu-year">2022 — 2023</span>
-        <div>
-          <h3>Higher Secondary, Class XII</h3>
-          <p class="edu-school">Late C. B. Kapadiya &amp; Late L. C. Kapadiya Madhyamik Shala</p>
-          <p class="edu-detail">60%</p>
-        </div>
-      </li>
-      <li class="edu-row reveal">
-        <span class="edu-year">2020 — 2021</span>
-        <div>
-          <h3>Secondary, Class X</h3>
-          <p class="edu-school">Shree Swaminarayan Gurukul Vidhyalaya</p>
-          <p class="edu-detail">88.50%</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <section class="section contact" id="contact">
-    <div class="contact-inner reveal">
-      <span class="section-num">05</span>
-      <h2>Currently interning in AI — open to what's next.</h2>
-      <p>I'm building models day to day and still take on WordPress and frontend work on the side. Based in Surat, working with teams anywhere.</p>
-      <a class="contact-cta" href="mailto:mayurunagar555@gmail.com">
-        mayurunagar555@gmail.com
-        <span class="cta-arrow" aria-hidden="true">→</span>
-      </a>
-      <p class="contact-phone">+91 63591 98825</p>
-      <div class="contact-links">
-        <a href="https://github.com/mayurunagar5" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/mayur-unagar-b48254398" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-foot">
-  <p>&copy; 2026 Mayur Unagar. Built by hand.</p>
-  <a href="#top" class="back-top">Back to top ↑</a>
-</footer>
-
-<!-- ============ Floating chatbot widget ============ -->
-<div class="chatbot" id="chatbot">
-  <button class="chatbot-toggle" id="chatbotToggle" aria-expanded="false" aria-controls="chatbotPanel" aria-label="Ask about Mayur">
-    <span class="chatbot-toggle-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" class="icon-chat"><path d="M4 4h16v12H7l-3 3V4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-      <svg viewBox="0 0 24 24" class="icon-close"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-    </span>
-  </button>
-
-  <section class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Chat about Mayur Unagar" aria-hidden="true">
-    <header class="chatbot-head">
-      <div>
-        <p class="chatbot-eyebrow">Ask about</p>
-        <h2>Mayur Unagar</h2>
-      </div>
-      <span class="chatbot-status"><span class="chatbot-dot"></span>Online</span>
+    <header class="site-head">
+      <a href="#top" class="mark">MU<span>.</span></a>
+      <nav class="rail-nav" aria-label="Primary">
+        <ol>
+          <li>
+            <a href="#about" data-idx="01"><span>01</span>About</a>
+          </li>
+          <li>
+            <a href="#expertise" data-idx="02"><span>02</span>Expertise</a>
+          </li>
+          <li>
+            <a href="#work" data-idx="03"><span>03</span>Work</a>
+          </li>
+          <li>
+            <a href="#education" data-idx="04"><span>04</span>Education</a>
+          </li>
+          <li>
+            <a href="#contact" data-idx="05"><span>05</span>Contact</a>
+          </li>
+        </ol>
+      </nav>
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle light and dark mode"
+      >
+        <span class="toggle-dot"></span>
+      </button>
+      <button
+        class="nav-burger"
+        id="navBurger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span>
+      </button>
     </header>
 
-    <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
-      <div class="chatbot-msg bot">
-        Hi, I'm Mayur's portfolio assistant. Ask me about his skills, experience, projects, or education.
-      </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <ol>
+        <li>
+          <a href="#about"><span>01</span>About</a>
+        </li>
+        <li>
+          <a href="#expertise"><span>02</span>Expertise</a>
+        </li>
+        <li>
+          <a href="#work"><span>03</span>Work</a>
+        </li>
+        <li>
+          <a href="#education"><span>04</span>Education</a>
+        </li>
+        <li>
+          <a href="#contact"><span>05</span>Contact</a>
+        </li>
+      </ol>
+    </nav>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-text">
+          <p class="hero-eyebrow reveal">Portfolio -</p>
+          <h1 class="hero-title">
+            <span class="line reveal-line"><span>Mayur</span></span>
+            <span class="line reveal-line"><span>Unagar</span></span>
+          </h1>
+          <div class="hero-meta reveal">
+            <p class="hero-role">
+              AI / ML Developer,<br />
+              building intelligent interfaces across the web.
+            </p>
+            <div class="hero-tags">
+              <span>AI / ML</span><span>WordPress</span><span>Frontend</span
+              ><span>UI · UX</span><span>Creative Dev</span>
+            </div>
+          </div>
+        </div>
+
+        <figure class="hero-portrait reveal">
+          <span class="hero-portrait-frame">
+            <img src="images/profile.jpg" alt="Portrait of Mayur Unagar" />
+          </span>
+          <span class="hero-portrait-tag">
+            <span class="hero-portrait-dot"></span> Available for work
+          </span>
+        </figure>
+
+        <a
+          class="hero-scroll"
+          href="#about"
+          aria-label="Scroll to about section"
+        >
+          <span class="scroll-line"></span> Scroll
+        </a>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="section-head reveal">
+          <span class="section-num">01</span>
+          <h2>About</h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-lede reveal">
+            I build models first, then the interfaces that put them to work —
+            currently deep in an AI internship, training and shipping systems
+            that hold up under real data.
+          </p>
+          <div class="about-body reveal">
+            <p>
+              I'm currently interning in AI, building and fine-tuning machine
+              learning models end to end — from data pipeline to a working,
+              testable system. Alongside that, I bring years of WordPress and
+              frontend experience, so the models I build don't stay in a
+              notebook; they end up in interfaces people actually use.
+            </p>
+            <p>
+              I care about the parts most people skip: model evaluation that
+              isn't just accuracy, load performance, the fifty small decisions
+              that separate "finished" from "considered." My tools change with
+              the job; the standard doesn't.
+            </p>
+            <dl class="about-facts">
+              <div>
+                <dt>Based in</dt>
+                <dd>India · Remote worldwide</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Applied AI, Frontend, WordPress</dd>
+              </div>
+              <div>
+                <dt>Currently</dt>
+                <dd>AI/ML Intern · building models</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section expertise" id="expertise">
+        <div class="section-head reveal">
+          <span class="section-num">02</span>
+          <h2>Expertise</h2>
+        </div>
+        <div class="expertise-grid">
+          <article class="skill-card reveal">
+            <span class="skill-index">01</span>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>
+              Training and fine-tuning models end to end — data pipelines,
+              evaluation, and deployment into real, model-backed products.
+            </p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-index">02</span>
+            <h3>WordPress Development</h3>
+            <p>
+              Custom themes, block editor systems, plugin architecture, and
+              performance-tuned builds that stay easy to maintain long after
+              launch.
+            </p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-index">03</span>
+            <h3>Frontend Engineering</h3>
+            <p>
+              Semantic, accessible interfaces built on modern CSS and vanilla
+              JavaScript — fast by default, animated with intent.
+            </p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-index">04</span>
+            <h3>UI / UX Design</h3>
+            <p>
+              Interfaces designed from the user's task backward — information
+              hierarchy first, decoration only where it earns its place.
+            </p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-index">05</span>
+            <h3>Creative Development</h3>
+            <p>
+              Scroll narratives, micro-interactions, and generative visuals for
+              brands that want their site to feel handmade.
+            </p>
+          </article>
+          <article class="skill-card reveal">
+            <span class="skill-index">06</span>
+            <h3>Performance &amp; Accessibility</h3>
+            <p>
+              Lean payloads, semantic markup, and keyboard-first navigation —
+              quality that shows up in Lighthouse and in daily use.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section work" id="work">
+        <div class="section-head reveal">
+          <span class="section-num">03</span>
+          <h2>Selected Work</h2>
+        </div>
+        <div class="work-list">
+          <article class="work-row reveal">
+            <div class="work-row-top">
+              <h3>Signal — Recommendation Engine</h3>
+              <span class="work-year">2026</span>
+            </div>
+            <p class="work-desc">
+              A lightweight ML recommendation layer for a media platform, tuned
+              to surface relevant reads without heavy inference cost. Built
+              during my AI internship.
+            </p>
+            <ul class="work-tags">
+              <li>AI / ML</li>
+              <li>Python</li>
+              <li>Model Deployment</li>
+            </ul>
+          </article>
+          <article class="work-row reveal">
+            <div class="work-row-top">
+              <h3>Atelier Commerce</h3>
+              <span class="work-year">2025</span>
+            </div>
+            <p class="work-desc">
+              A headless WordPress storefront rebuilt for speed — sub-second
+              interactions across an 800-product catalog.
+            </p>
+            <ul class="work-tags">
+              <li>WordPress</li>
+              <li>WooCommerce</li>
+              <li>Performance</li>
+            </ul>
+          </article>
+          <article class="work-row reveal">
+            <div class="work-row-top">
+              <h3>Ferro Studio</h3>
+              <span class="work-year">2023</span>
+            </div>
+            <p class="work-desc">
+              Editorial portfolio site for an architecture studio, built as a
+              scroll-driven narrative with no frameworks — pure HTML, CSS, and
+              JS.
+            </p>
+            <ul class="work-tags">
+              <li>Frontend</li>
+              <li>Motion Design</li>
+              <li>Vanilla JS</li>
+            </ul>
+          </article>
+          <article class="work-row reveal">
+            <div class="work-row-top">
+              <h3>Nord Analytics Dashboard</h3>
+              <span class="work-year">2022</span>
+            </div>
+            <p class="work-desc">
+              A data-dense internal dashboard redesigned around clarity — fewer
+              colors, clearer hierarchy, faster decisions.
+            </p>
+            <ul class="work-tags">
+              <li>UI / UX</li>
+              <li>Design Systems</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education" id="education">
+        <div class="section-head reveal">
+          <span class="section-num">04</span>
+          <h2>Education</h2>
+        </div>
+        <ol class="edu-list">
+          <li class="edu-row reveal">
+            <span class="edu-year">2023 — 2026</span>
+            <div>
+              <h3>Bachelor of Science, Information Technology</h3>
+              <p class="edu-school">
+                Shree Ramkrishna Institute of Computer Education and Applied
+                Sciences, Surat
+              </p>
+              <p class="edu-detail">7.95 CGPA</p>
+            </div>
+          </li>
+          <li class="edu-row reveal">
+            <span class="edu-year">2022 — 2023</span>
+            <div>
+              <h3>Higher Secondary, Class XII</h3>
+              <p class="edu-school">
+                Late C. B. Kapadiya &amp; Late L. C. Kapadiya Madhyamik Shala
+              </p>
+              <p class="edu-detail">60%</p>
+            </div>
+          </li>
+          <li class="edu-row reveal">
+            <span class="edu-year">2020 — 2021</span>
+            <div>
+              <h3>Secondary, Class X</h3>
+              <p class="edu-school">Shree Swaminarayan Gurukul Vidhyalaya</p>
+              <p class="edu-detail">88.50%</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-inner reveal">
+          <span class="section-num">05</span>
+          <h2>Currently interning in AI — open to what's next.</h2>
+          <p>
+            I'm building models day to day and still take on WordPress and
+            frontend work on the side. Based in Surat, working with teams
+            anywhere.
+          </p>
+          <a class="contact-cta" href="mailto:mayurunagar555@gmail.com">
+            mayurunagar555@gmail.com
+            <span class="cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <p class="contact-phone">+91 63591 98825</p>
+          <div class="contact-links">
+            <a
+              href="https://github.com/mayurunagar5"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/mayur-unagar-b48254398"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-foot">
+      <p>&copy; 2026 Mayur Unagar. Built by hand.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </footer>
+
+    <!-- ============ Floating chatbot widget ============ -->
+    <div class="chatbot" id="chatbot">
+      <button
+        class="chatbot-toggle"
+        id="chatbotToggle"
+        aria-expanded="false"
+        aria-controls="chatbotPanel"
+        aria-label="Ask about Mayur"
+      >
+        <span class="chatbot-toggle-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" class="icon-chat">
+            <path
+              d="M4 4h16v12H7l-3 3V4z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg viewBox="0 0 24 24" class="icon-close">
+            <path
+              d="M5 5l14 14M19 5L5 19"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+        </span>
+      </button>
+
+      <section
+        class="chatbot-panel"
+        id="chatbotPanel"
+        role="dialog"
+        aria-label="Chat about Mayur Unagar"
+        aria-hidden="true"
+      >
+        <header class="chatbot-head">
+          <div>
+            <p class="chatbot-eyebrow">Ask about</p>
+            <h2>Mayur Unagar</h2>
+          </div>
+          <span class="chatbot-status"
+            ><span class="chatbot-dot"></span>Online</span
+          >
+        </header>
+
+        <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
+          <div class="chatbot-msg bot">
+            Hi, I'm Mayur's portfolio assistant. Ask me about his skills,
+            experience, projects, or education.
+          </div>
+        </div>
+
+        <form class="chatbot-form" id="chatbotForm">
+          <input
+            type="text"
+            id="chatbotInput"
+            class="chatbot-input"
+            placeholder="Ask a question…"
+            autocomplete="off"
+            aria-label="Type your question"
+          />
+          <button type="submit" class="chatbot-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 12L4 4l6 8-6 8 16-8z" fill="currentColor" />
+            </svg>
+          </button>
+        </form>
+      </section>
     </div>
 
-    <form class="chatbot-form" id="chatbotForm">
-      <input
-        type="text"
-        id="chatbotInput"
-        class="chatbot-input"
-        placeholder="Ask a question…"
-        autocomplete="off"
-        aria-label="Type your question"
-      >
-      <button type="submit" class="chatbot-send" aria-label="Send message">
-        <svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 8 6 8-16-8z" fill="currentColor"/></svg>
-      </button>
-    </form>
-  </section>
-</div>
-
-<script src="script.js"></script>
-<script src="chatbot.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+  </body>
 </html>
