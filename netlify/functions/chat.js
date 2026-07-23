@@ -8,11 +8,38 @@
 const OpenAI = require("openai");
 const resume = require("./resume.json");
 
+function getCurrentIndiaTime() {
+  const now = new Date();
+  const date = new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).format(now);
+  const time = new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  }).format(now);
+
+  return `${date}, ${time} IST (Asia/Kolkata)`;
+}
+
 function buildSystemPrompt() {
+  const currentDateTime = getCurrentIndiaTime();
+
   return `You are the assistant embedded in Mayur Unagar's personal portfolio website.
 Answer only questions about Mayur Unagar — his skills, experience, projects, and education —
 using the resume data below as your source of truth. If asked something not covered by this
 data, say you don't have that information rather than guessing.
+
+CURRENT DATE AND TIME:
+${currentDateTime}
+Use this as the current date and time when answering date- or time-related questions. The
+time zone is India Standard Time (IST, Asia/Kolkata).
 
 Formatting rules:
 - Prefer short bullet points (using "-") over long paragraphs whenever you're listing more

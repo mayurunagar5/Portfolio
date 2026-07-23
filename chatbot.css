@@ -78,6 +78,11 @@
   width: 6px; height: 6px; border-radius: 50%; background: var(--brass);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--brass) 25%, transparent);
 }
+.chatbot-current-time{
+  padding: .55rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: .62rem; color: var(--muted);
+}
 
 /* ---------- Messages ---------- */
 .chatbot-messages{

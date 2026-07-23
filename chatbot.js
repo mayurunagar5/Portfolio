@@ -14,12 +14,38 @@
   var messagesEl = document.getElementById("chatbotMessages");
   var form = document.getElementById("chatbotForm");
   var input = document.getElementById("chatbotInput");
+  var currentTimeEl = document.getElementById("chatbotCurrentTime");
 
   if (!chatbot || !toggle || !panel || !messagesEl || !form || !input) return;
 
   // Short-term memory for this session only (cleared on reload).
   var history = [];
   var isSending = false;
+
+  // Keep the displayed clock aligned with the time zone used by the assistant.
+  function updateCurrentTime() {
+    if (!currentTimeEl) return;
+
+    var now = new Date();
+    var date = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    }).format(now);
+    var time = new Intl.DateTimeFormat("en-IN", {
+      timeZone: "Asia/Kolkata",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    }).format(now);
+
+    currentTimeEl.textContent = "India time: " + date + ", " + time + " IST";
+  }
+
+  updateCurrentTime();
+  window.setInterval(updateCurrentTime, 1000);
 
   /* ---------- Open / close ---------- */
   function openChat() {
