@@ -1,4 +1,16 @@
+|-- .gitignore
+|-- chatbot.css
+|-- chatbot.js
 |-- index.html
 |-- README.md
 |-- script.js
+|-- server
+    |-- .env
+    |-- data
+        |-- resume.json
+    |-- package.json
+    |-- server.js
+|-- src
+    |-- Mayur Unagar ATS Resume.pdf
+    |-- mayur.jpeg
 |-- style.css

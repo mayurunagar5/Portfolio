@@ -1,0 +1,90 @@
+{
+  "name": "Mayur Unagar",
+  "titles": ["WordPress Developer", "Web Developer", "WooCommerce Developer", "AI/ML Intern"],
+  "contact": {
+    "email": "mayurunagar555@gmail.com",
+    "phone": "+91 63591 98825",
+    "location": "Surat, India",
+    "github": "https://github.com/mayurunagar5",
+    "linkedin": "https://www.linkedin.com/in/mayur-unagar-b48254398"
+  },
+  "summary": "Motivated and detail-oriented developer with hands-on experience designing, developing, and maintaining responsive, SEO-friendly WordPress websites. Currently interning in AI, building and fine-tuning machine learning models end to end. Comfortable across WordPress theme customization, plugin integration, database management, and e-commerce functionality. Passionate about learning new technologies and creating high-quality web and AI-driven experiences.",
+  "skills": {
+    "programming_languages": ["C", "Java", "Python (Basic)", "HTML5", "CSS3"],
+    "web_development": ["WordPress", "Custom Theme Development", "Plugin Development", "Responsive Web Design"],
+    "database": ["MySQL"],
+    "website_optimization": ["SEO", "Website Performance Optimization"],
+    "digital_marketing": ["Website Promotion", "Basic Digital Marketing"],
+    "creative_skills": ["Video Editing", "Video Shooting"],
+    "tools": ["WordPress", "cPanel", "XAMPP"],
+    "current_focus": ["AI / Machine Learning model building and fine-tuning"]
+  },
+  "experience": [
+    {
+      "role": "Digital Marketing & Content (prior role)",
+      "duration": null,
+      "points": [
+        "Planned and executed digital marketing campaigns.",
+        "Produced promotional videos and reels through professional video shooting and editing.",
+        "Designed landing pages for marketing campaigns.",
+        "Assisted with SEO and content optimization."
+      ]
+    },
+    {
+      "role": "WordPress Developer Intern",
+      "duration": "May 2025 - June 2025",
+      "points": [
+        "Developed responsive WordPress websites.",
+        "Created custom themes and plugins.",
+        "Built SEO-friendly websites with shopping cart and payment gateway integration.",
+        "Learned professional development workflow and website maintenance."
+      ]
+    },
+    {
+      "role": "AI/ML Intern",
+      "duration": "Current",
+      "points": [
+        "Building and fine-tuning machine learning models end to end.",
+        "Working across data pipelines, model evaluation, and deployment."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Business Website Collection",
+      "technologies": ["WordPress", "HTML", "CSS", "MySQL"],
+      "points": [
+        "Developed a responsive business website with a modern user interface.",
+        "Customized themes and optimized the website for SEO."
+      ]
+    },
+    {
+      "name": "Temple Website",
+      "technologies": ["WordPress", "HTML", "CSS"],
+      "points": [
+        "Built an informational website with responsive design.",
+        "Optimized pages for SEO and performance."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science (B.Sc.) in Information Technology",
+      "school": "Shree Ramkrishna Institute of Computer Education and Applied Sciences, Surat",
+      "duration": "July 2023 - May 2026",
+      "score": "7.95 CGPA"
+    },
+    {
+      "degree": "Higher Secondary (Class XII)",
+      "school": "Late C. B. Kapadiya & Late L. C. Kapadiya Madhyamik Shala",
+      "duration": "June 2022 - March 2023",
+      "score": "60%"
+    },
+    {
+      "degree": "Secondary (Class X)",
+      "school": "Shree Swaminarayan Gurukul Vidhyalaya",
+      "duration": "June 2020 - March 2021",
+      "score": "88.50%"
+    }
+  ]
+}
